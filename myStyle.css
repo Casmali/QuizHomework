@@ -1,12 +1,15 @@
 body{
-	background-color: lightblue;
-	
+	background-color: lightblue;	
 }
 
 p{
 	font-size: 90%;
 	color: purple;
 	font-family: "Times New Roman", Times, serif;
+}
+
+.d{
+	display:none;
 }
 
 img{
