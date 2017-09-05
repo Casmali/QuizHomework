@@ -6,6 +6,7 @@ $(document).ready(function(){
 			$("#fin").show();
 			$("#k2").hide();
 			$("#k1").hide();
+			$("#a3").hide();
 		}else{
 			$("#k1").show();
 			$("#k2").hide();
@@ -23,4 +24,11 @@ $(document).ready(function(){
 		indx = indx+1;
 	});
 	
+	$("#img").click(function(){
+		for (i=0, i < pars.length; i++){
+			$("#k2").hide();
+			$("#k1").hide();
+			$(pars[i]).show();
+		}
+	});
 });
