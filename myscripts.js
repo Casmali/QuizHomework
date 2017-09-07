@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var pars=["#q1","#q2","#q3","#a1","#a2","#a3"];
 	var indx=0;
+	var cycle = 3;
 	$("#k2").click(function(){
 		if(indx > 2){
 			$("#fin").show();
@@ -24,11 +25,23 @@ $(document).ready(function(){
 		indx = indx+1;
 	});
 	
+	
 	$("#img").click(function(){
-		for (i=0, i < pars.length; i++){
-			$("#k2").hide();
-			$("#k1").hide();
-			$(pars[i]).show();
+		if(cycle == 1){
+			for (i=0; i < pars.length; i++){
+				$("#k2").hide();
+				$("#k1").hide();
+				$(pars[i]).show();
+			}
+			cycle = 2;
+		} else {
+			for (i=0; i < pars.length; i++){
+				$("#k2").show();
+				$(pars[i]).hide();
+			}
+			cycle = 1;
+			indx=0;
+			$("#fin").hide();
 		}
 	});
 });
